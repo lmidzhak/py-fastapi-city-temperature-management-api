@@ -15,7 +15,7 @@ class CityCreate(CityBase):
 
 
 class CityUpdate(CityBase):
-    name: Optional[str] = None
+    name: str
     additional_info: Optional[str] = None
 
 

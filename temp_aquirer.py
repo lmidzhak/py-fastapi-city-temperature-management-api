@@ -17,5 +17,5 @@ async def get_weather_async(city: str) -> dict:
     async with httpx.AsyncClient() as client:
         response = await client.get(BASE_URL, params=params)
         response.raise_for_status()
-        data = response.json()
+        data = await response.json()
         return data

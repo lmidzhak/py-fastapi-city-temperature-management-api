@@ -32,6 +32,6 @@ async def get_temperatures(db: AsyncSession, city_id: Optional[int] = None) -> l
 
 
 async def get_city_temperature(db: AsyncSession, city_id: int):
-    query = select(models.DBTemperature).where(DBCity.id == city_id)
+    query = select(models.DBTemperature).where(models.DBTemperature.city_id == city_id)
     resp = await db.execute(query)
     return resp.scalars().all()
