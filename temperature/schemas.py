@@ -18,8 +18,7 @@ class TemperatureCreate(TemperatureBase):
 
 
 class TemperatureUpdate(TemperatureBase):
-    name: Optional[str] = None
-    additional_info: Optional[str] = None
+    pass
 
 
 class Temperature(TemperatureBase):
